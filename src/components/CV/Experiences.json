@@ -24,64 +24,64 @@
       "team-player"
     ]
   },
-  "work-experience": {
+  "workExperience": {
     "1": {
-      "role": "Brand Ambassador",
+      "name": "Brand Ambassador",
       "company": "SheCodes",
       "when": "Jun-22 to Present"
     },
     "2": {
-      "role": "Summer Assistant",
+      "name": "Summer Assistant",
       "company": "The Norwegian Diabetes Association",
       "when": "Jun-23 to Jul-23"
     },
     "3": {
-      "role": "Nurse Assistant",
+      "name": "Nurse Assistant",
       "company": "Helse Møre og Romsdal HF",
       "when": "May-17 to Sep-17"
     },
     "4": {
-      "role": "Nurse Assistant",
+      "name": "Nurse Assistant",
       "company": "Kristiansund Kommune",
       "when": "Apr-15 to Apr-16"
     },
     "5": {
-      "role": "Sales Assistant",
+      "name": "Sales Assistant",
       "company": "Narvesen Storkaia",
       "when": "May-09 to Aug-16"
     }
   },
   "volunteering": {
     "1": {
-      "role": "Student Representative",
+      "name": "Student Representative",
       "company": "Molde University College",
       "when": "Aug-15 to Aug-16"
     },
     "2": {
-      "role": "Board Member",
+      "name": "Board Member",
       "company": "Diabetes association (Kristiansund)",
       "when": "Feb-12 to Feb-16"
     },
     "3": {
-      "role": "Leader",
+      "name": "Leader",
       "company": "Youth diabetes association (Møre og Romsdal)",
       "when": "Mar-10 to Mar-13"
     }
   },
   "education": {
     "1": {
-      "institution": "Molde University College",
-      "field": "Information Technology",
+      "company": "Molde University College",
+      "name": "Information Technology",
       "when": "2022 to Present"
     },
     "2": {
-      "institution": "Molde University College",
-      "field": "Nursing",
+      "company": "Molde University College",
+      "name": "Nursing",
       "when": "2015 to 2017"
     },
     "3": {
-      "institution": "Kristiansund Upper Secondary School",
-      "field": "Media and Communication",
+      "company": "Kristiansund Upper Secondary School",
+      "name": "Media and Communication",
       "when": "2012 to 2015"
     }
   },

@@ -2,9 +2,6 @@ import React from 'react';
 import Experience from './Experience';
 
 export default function CV() {
-  const workExperience = {
-    company: 'SheCodes',
-  };
   return (
     <>
       <div className="CV">
@@ -24,10 +21,7 @@ export default function CV() {
             <li>Customer oriented, team-player</li>
           </ul>
         </div>
-        <Experience></Experience>
-        <div className="volunteering"></div>
-        <div className="education"></div>
-        <div className="courses"></div>
+        <Experience />
       </div>
     </>
   );
