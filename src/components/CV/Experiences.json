@@ -1,13 +1,8 @@
 {
   "skills": {
     "technical": [
-      "HTML",
-      "CSS",
-      "JavaScript",
-      "React",
-      "Python",
-      "Git",
-      "Github",
+      "HTML, CSS, JavaScript, React, Python",
+      "Git, Github",
       "Netlify",
       "VSCode",
       "SAP",
@@ -15,13 +10,9 @@
       "Windows"
     ],
     "general": [
-      "Academically strong",
-      "dedicated",
-      "Self-motivated",
-      "trustworthy",
-      "willing to learn",
-      "Customer oriented",
-      "team-player"
+      "Academically strong, dedicated",
+      "Self-motivated, trustworthy",
+      "Willing to learn, team-player"
     ]
   },
   "workExperience": {

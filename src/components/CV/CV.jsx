@@ -1,5 +1,6 @@
 import React from 'react';
 import Experience from './Experience';
+import Skills from './Skills';
 
 export default function CV() {
   return (
@@ -7,7 +8,8 @@ export default function CV() {
       <div className="CV">
         <h2>Resume</h2>
         <div className="title"></div>
-        <div className="skills">
+        <Skills />
+        {/* <section className="skills">
           <h4>Technical</h4>
           <ul>
             <li>HTML, CSS, JavaScript, React, Python</li>
@@ -20,7 +22,7 @@ export default function CV() {
             <li>Self-motivated, trustworthy, willing to learn</li>
             <li>Customer oriented, team-player</li>
           </ul>
-        </div>
+        </section> */}
         <Experience />
       </div>
     </>
