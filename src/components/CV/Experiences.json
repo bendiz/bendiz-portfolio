@@ -1,0 +1,125 @@
+{
+  "skills": {
+    "technical": [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "React",
+      "Python",
+      "Git",
+      "Github",
+      "Netlify",
+      "VSCode",
+      "SAP",
+      "Microsoft Office",
+      "Windows"
+    ],
+    "general": [
+      "Academically strong",
+      "dedicated",
+      "Self-motivated",
+      "trustworthy",
+      "willing to learn",
+      "Customer oriented",
+      "team-player"
+    ]
+  },
+  "work-experience": {
+    "1": {
+      "role": "Brand Ambassador",
+      "company": "SheCodes",
+      "when": "Jun-22 to Present"
+    },
+    "2": {
+      "role": "Summer Assistant",
+      "company": "The Norwegian Diabetes Association",
+      "when": "Jun-23 to Jul-23"
+    },
+    "3": {
+      "role": "Nurse Assistant",
+      "company": "Helse Møre og Romsdal HF",
+      "when": "May-17 to Sep-17"
+    },
+    "4": {
+      "role": "Nurse Assistant",
+      "company": "Kristiansund Kommune",
+      "when": "Apr-15 to Apr-16"
+    },
+    "5": {
+      "role": "Sales Assistant",
+      "company": "Narvesen Storkaia",
+      "when": "May-09 to Aug-16"
+    }
+  },
+  "volunteering": {
+    "1": {
+      "role": "Student Representative",
+      "company": "Molde University College",
+      "when": "Aug-15 to Aug-16"
+    },
+    "2": {
+      "role": "Board Member",
+      "company": "Diabetes association (Kristiansund)",
+      "when": "Feb-12 to Feb-16"
+    },
+    "3": {
+      "role": "Leader",
+      "company": "Youth diabetes association (Møre og Romsdal)",
+      "when": "Mar-10 to Mar-13"
+    }
+  },
+  "education": {
+    "1": {
+      "institution": "Molde University College",
+      "field": "Information Technology",
+      "when": "2022 to Present"
+    },
+    "2": {
+      "institution": "Molde University College",
+      "field": "Nursing",
+      "when": "2015 to 2017"
+    },
+    "3": {
+      "institution": "Kristiansund Upper Secondary School",
+      "field": "Media and Communication",
+      "when": "2012 to 2015"
+    }
+  },
+  "courses": {
+    "1": {
+      "company": "SheCodes",
+      "name": "React 6-Week Course",
+      "when": "Mar-23"
+    },
+    "2": {
+      "company": "Codecademy",
+      "name": "Git: Branching & Collaboration",
+      "when": "Mar-23"
+    },
+    "3": {
+      "company": "Codecademy",
+      "name": "Object-Oriented Programming with Python",
+      "when": "Feb-23"
+    },
+    "4": {
+      "company": "Codecademy",
+      "name": "Python 3",
+      "when": "Jan-23"
+    },
+    "5": {
+      "company": "SheCodes",
+      "name": "Responsive Web Development 5-Week Course",
+      "when": "Sep-22"
+    },
+    "6": {
+      "company": "SheCodes",
+      "name": "Web Development with JavaScript 8-Week Course",
+      "when": "Jul-22"
+    },
+    "7": {
+      "company": "SheCodes",
+      "name": "Intro to HTML, CSS and JavaScript",
+      "when": "May-22"
+    }
+  }
+}
