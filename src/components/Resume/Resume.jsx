@@ -2,13 +2,16 @@ import { React } from 'react';
 import Experience from './Experience';
 import Skills from './Skills';
 import { TypeAnimation } from 'react-type-animation';
+import 'animate.css';
 
 export default function Resume() {
   const cursorClassName = 'custom-cursor';
   const addUnderlineClass = 'add-underline';
   return (
     <article className="Resume">
-      <h1>Benedicte W. Roksvåg</h1>
+      <h1 className="animate__animated animate__bounceIn">
+        Benedicte W. Roksvåg
+      </h1>
       <TypeAnimation
         aria-hidden="true"
         sequence={[
@@ -29,7 +32,7 @@ export default function Resume() {
         cursor={false}
         className={cursorClassName}
       />
-      <div className="terminal">
+      <div className="terminal ">
         <div className="terminal-tab">
           <div className="tab-options">
             <div className="dots">
