@@ -20,10 +20,14 @@ export default function Experience() {
   const courses = Object.entries(Experiences.courses).map(experienceList);
 
   return (
-    <section className="experience">
+    <section className="Experience">
+      <h3>Experience</h3>
       <div>{work}</div>
+      <h3>Volunteer work</h3>
       <div>{volunteering}</div>
+      <h3>Education</h3>
       <div>{education}</div>
+      <h3>Courses and certifications</h3>
       <div>{courses}</div>
     </section>
   );

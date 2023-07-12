@@ -1,0 +1,81 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+/* RESUME */
+
+.Resume {
+  background: #ffffff;
+  color: #383737;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  line-height: 1.5;
+  font-size: 1.6rem;
+}
+
+.Resume .Skills,
+.Resume .Experience {
+  max-width: 600px;
+  min-width: 200px;
+}
+
+.Resume > h2 {
+  font-size: 4rem;
+  text-decoration: #8f43ee solid underline 7px;
+  text-underline-offset: 0.2em;
+  text-decoration-skip-ink: none;
+}
+.Resume > h2::before,
+.Resume > h2::after {
+  content: '"""';
+  color: transparent;
+}
+
+.Resume ul {
+  list-style-type: none;
+  text-align: left;
+  list-style-position: inside;
+}
+
+.Resume li::before {
+  content: '- ';
+}
+
+.Resume > section {
+  margin-bottom: 1.5rem;
+}
+
+.Resume h3 {
+  font-size: 2.4rem;
+  text-align: center;
+  margin-block: 1.5rem;
+}
+
+.Resume h4 {
+  margin-block: 1.4em 0.5em;
+}
+
+.Resume .Experience dl {
+  background-color: #9043ee0d;
+  padding: 3em 2em;
+  margin: 2em 1em;
+  border-radius: 0.2rem;
+  box-shadow: 0 0 0 1.5px rgba(143, 67, 238, 1),
+    8px 8px 0 0 rgba(143, 67, 238, 1);
+}
+
+.Resume .Experience dt {
+  font-weight: 600;
+}
+
+.Resume .Experience dd:last-of-type {
+  font-style: italic;
+  opacity: 0.8;
+}
