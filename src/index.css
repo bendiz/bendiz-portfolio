@@ -8,74 +8,118 @@ html {
   font-size: 62.5%;
 }
 
-/* RESUME */
+/* Resume */
+
+html {
+  background-color: rgb(255, 218, 218);
+}
 
 .Resume {
-  background: #ffffff;
+  margin-inline: 2rem;
+  font-family: 'Source Code Pro';
+  text-align: center;
   color: #383737;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   line-height: 1.5;
   font-size: 1.6rem;
 }
 
-.Resume .Skills,
-.Resume .Experience {
-  max-width: 600px;
-  min-width: 200px;
+.Resume > h1 {
+  font-family: 'Montserrat';
+  font-weight: 800;
+  margin-block: 8rem 2rem;
+  font-size: 5rem;
+  line-height: 1;
 }
 
-.Resume > h2 {
-  font-size: 4rem;
-  text-decoration: #8f43ee solid underline 7px;
-  text-underline-offset: 0.2em;
-  text-decoration-skip-ink: none;
-}
-.Resume > h2::before,
-.Resume > h2::after {
-  content: '"""';
-  color: transparent;
+.Resume p {
+  padding: 2rem;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
-.Resume ul {
-  list-style-type: none;
-  text-align: left;
-  list-style-position: inside;
+/* Blinking cursor */
+.custom-cursor::after {
+  content: '|';
+  animation: cursor 1.1s infinite step-start;
+}
+@keyframes cursor {
+  50% {
+    opacity: 0;
+  }
 }
 
-.Resume li::before {
-  content: '- ';
+/* Terminal window */
+.terminal {
+  width: 100%;
 }
 
-.Resume > section {
-  margin-bottom: 1.5rem;
+.tab-options {
+  display: flex;
+  align-items: center;
+  height: 100%;
 }
 
-.Resume h3 {
-  font-size: 2.4rem;
+.terminal-tab {
+  position: relative;
+  top: 1em;
+  --tab-ratio: 10 / 800;
+  min-height: 15px;
+  height: calc(100vw * var(--tab-ratio));
+  background-color: #202026;
+}
+
+.tab-options > h3 {
+  font-family: 'Source Code Pro';
+  position: absolute;
+  display: inline;
+  margin: 0;
+  font-size: 1rem;
+  color: #f1f2e5b7;
   text-align: center;
-  margin-block: 1.5rem;
+  width: 100%;
 }
 
-.Resume h4 {
-  margin-block: 1.4em 0.5em;
+.dots {
+  display: flex;
+  gap: 0.5em;
+  height: calc(100vw * var(--tab-ratio));
+  align-items: center;
+  margin-left: 0.6em;
 }
 
-.Resume .Experience dl {
-  background-color: #9043ee0d;
-  padding: 3em 2em;
-  margin: 2em 1em;
-  border-radius: 0.2rem;
-  box-shadow: 0 0 0 1.5px rgba(143, 67, 238, 1),
-    8px 8px 0 0 rgba(143, 67, 238, 1);
+.dot {
+  width: 9px;
+  height: 9px;
+  background-color: #fe2e2c;
+  z-index: 999;
+  border-radius: 100px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+    rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
 }
 
-.Resume .Experience dt {
-  font-weight: 600;
+.dot:nth-of-type(2) {
+  background-color: #fdc95a;
 }
 
-.Resume .Experience dd:last-of-type {
-  font-style: italic;
-  opacity: 0.8;
+.dot:nth-of-type(3) {
+  background-color: #78c64a;
+}
+
+.terminal-window {
+  height: calc(100vw * var(--ratio));
+  max-height: 550px;
+  background-color: #424242;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
+    rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
+
+.terminal-window,
+.terminal-tab {
+  --ratio: 500 / 800;
+  --container-width: 30em;
+  display: block;
+  max-width: 800px;
+  border-radius: 5px;
+  margin: 0 auto;
 }
