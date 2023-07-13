@@ -7,9 +7,11 @@ import classNames from 'classnames';
 
 export default function Resume() {
   const [consoleMessage, setConsoleMessage] = useState('');
+  const [cursorMarker, setCursorMarker] = useState('cursor-marker');
+  const [visibility, setVisibility] = useState('show');
+  const fieldCursor = classNames(cursorMarker, visibility);
   const cursorClassName = 'custom-cursor';
   const textClass = 'text';
-  const addUnderlineClass = 'add-underline';
   const typewriterText = classNames(cursorClassName, textClass);
   const handleHelp = (e) => {
     e.preventDefault();
@@ -21,6 +23,9 @@ export default function Resume() {
   };
 
   const updateConsole = (e) => {
+    if (consoleMessage) {
+      setVisibility('hidden');
+    }
     setConsoleMessage(e.target.value.toLowerCase().trim());
   };
 
@@ -143,17 +148,37 @@ export default function Resume() {
           </div>
           <div className="help-function">
             <form id="help-form" onSubmit={handleHelp}>
-              <input
-                type="help"
-                name="help"
-                id="help"
-                autoFocus
-                maxLength="4"
-                minLength="4"
-                onChange={updateConsole}
-                placeholder="Type /help for more commands"
-              />
-              <span className="cursorMarker yellow">|</span>
+              <div className="input-group">
+                <label htmlFor="help">
+                  <input
+                    type="help"
+                    name="help"
+                    id="help"
+                    // autoFocus
+                    maxLength="10"
+                    minLength="4"
+                    onChange={updateConsole}
+                    onFocus={() => setVisibility('hidden')}
+                    onBlur={() =>
+                      setVisibility('').then(
+                        setConsoleMessage('').then(
+                          setCursorMarker('cursor-marker')
+                        )
+                      )
+                    }
+                  />
+                  <span
+                    className={classNames('placeholder', 'yellow', visibility)}
+                  >
+                    &gt; Type /help for more commands
+                    <span
+                      className={classNames(visibility, 'yellow', cursorMarker)}
+                    >
+                      |
+                    </span>
+                  </span>
+                </label>
+              </div>
             </form>
           </div>
         </div>

@@ -62,8 +62,25 @@ input[type='help'] {
   font-family: 'Source Code Pro';
   font-size: 1em;
   background-color: transparent;
-  width: 190px;
   border: 0;
+  border: none;
+  -webkit-appearance: none;
+  -ms-appearance: none;
+  -moz-appearance: none;
+  background: transparent;
+  padding: 5px;
+  border-radius: 3px;
+}
+
+input[type='help']:active {
+  border: 0;
+  color: #fff;
+}
+
+textarea:focus,
+input:focus {
+  outline: none;
+  color: var(--yellow);
 }
 
 /* Blinking cursor */
@@ -173,11 +190,24 @@ input[type='help'] {
 .help-function {
   position: absolute;
   bottom: 1.5em;
+  display: inline-block;
+  width: 100%;
 }
 
-.help-form {
-}
-
-.cursorMarker {
+.cursor-marker {
   animation: cursor 1.1s infinite step-start;
+}
+
+.hidden {
+  display: none;
+}
+
+.input-group {
+  position: relative;
+}
+
+.placeholder {
+  position: absolute;
+  top: 0.3em;
+  left: 0.6em;
 }
