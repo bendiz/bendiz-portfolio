@@ -148,9 +148,10 @@ export default function Resume() {
                 name="help"
                 id="help"
                 autoFocus
-                maxLength="14"
-                minLength="2"
+                maxLength="4"
+                minLength="4"
                 onChange={updateConsole}
+                placeholder="Type /help for more commands"
               />
             </form>
           </div>
