@@ -13,5 +13,10 @@ export default function Skills() {
     );
   });
 
-  return <section className="skills">{skillList}</section>;
+  return (
+    <section className="Skills">
+      <h3>Skills and Strengths</h3>
+      {skillList}
+    </section>
+  );
 }
