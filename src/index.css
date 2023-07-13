@@ -1,3 +1,9 @@
+:root {
+  --yellow: #f6f67d;
+  --blue: #79eedd;
+  --pink: #e776b1;
+}
+
 * {
   box-sizing: border-box;
   padding: 0;
@@ -11,14 +17,15 @@ html {
 /* Resume */
 
 html {
-  background-color: rgb(255, 218, 218);
+  background-color: #ffe4e6;
 }
 
 .Resume {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   margin-inline: 2rem;
   font-family: 'Source Code Pro';
-  text-align: center;
-  color: #383737;
   line-height: 1.5;
   font-size: 1.6rem;
 }
@@ -27,14 +34,24 @@ html {
   font-family: 'Montserrat';
   font-weight: 800;
   margin-block: 8rem 2rem;
-  font-size: 5rem;
+  font-size: 6rem;
   line-height: 1;
+  max-width: 800px;
 }
 
-.Resume p {
-  padding: 2rem;
+.Resume p.text {
+  padding: 2rem 0;
   max-width: 800px;
   margin: 0 auto;
+}
+
+.Resume a {
+  text-decoration: none;
+  color: var(--blue);
+}
+
+.yellow {
+  color: var(--yellow);
 }
 
 /* Blinking cursor */
@@ -53,33 +70,28 @@ html {
   width: 100%;
 }
 
-.tab-options {
+.terminal--heading {
+  font-size: 1em;
+  font-weight: 400;
+  color: var(--pink);
+}
+
+.tab--options {
   display: flex;
   align-items: center;
   height: 100%;
 }
 
-.terminal-tab {
+.terminal--tab {
   position: relative;
   top: 1em;
   --tab-ratio: 10 / 800;
   min-height: 15px;
   height: calc(100vw * var(--tab-ratio));
-  background-color: #202026;
+  background-color: #2b2640;
 }
 
-.tab-options > h3 {
-  font-family: 'Source Code Pro';
-  position: absolute;
-  display: inline;
-  margin: 0;
-  font-size: 1rem;
-  color: #f1f2e5b7;
-  text-align: center;
-  width: 100%;
-}
-
-.dots {
+.terminal--dots {
   display: flex;
   gap: 0.5em;
   height: calc(100vw * var(--tab-ratio));
@@ -87,7 +99,7 @@ html {
   margin-left: 0.6em;
 }
 
-.dot {
+.terminal--dot {
   width: 9px;
   height: 9px;
   background-color: #fe2e2c;
@@ -98,28 +110,57 @@ html {
     rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
 }
 
-.dot:nth-of-type(2) {
+.terminal--dot:nth-of-type(2) {
   background-color: #fdc95a;
 }
 
-.dot:nth-of-type(3) {
+.terminal--dot:nth-of-type(3) {
   background-color: #78c64a;
 }
 
-.terminal-window {
+.terminal--window {
   height: calc(100vw * var(--ratio));
-  max-height: 550px;
-  background-color: #424242;
+  max-height: 500px;
+  background-color: #22212c;
   box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
     rgba(0, 0, 0, 0.22) 0px 10px 10px;
+  text-align: left;
+  font-size: 0.7em;
+  color: #fff;
+  position: relative;
 }
 
-.terminal-window,
-.terminal-tab {
+.terminal--window > p:first-of-type {
+  padding-top: 2.5em;
+}
+
+.terminal--window > p:first-of-type,
+.terminal--window > p:nth-of-type(-n + 2) {
+  color: #fff;
+}
+
+.terminal--window > p,
+.command-section,
+.help-function {
+  padding: 0 1em;
+}
+
+.terminal--window .command-section {
+  padding-block: 0.5em;
+}
+
+.terminal--window,
+.terminal--tab {
   --ratio: 500 / 800;
   --container-width: 30em;
-  display: block;
   max-width: 800px;
   border-radius: 5px;
   margin: 0 auto;
+}
+
+.yellow {
+}
+.help-function {
+  position: absolute;
+  bottom: 1.5em;
 }
