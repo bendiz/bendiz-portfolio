@@ -15,8 +15,8 @@ export default function Resume() {
 
   const handleHelp = (e) => {
     e.preventDefault();
-    if (consoleMessage === 'help') {
-      console.log('Help');
+    if (consoleMessage === '/help') {
+      activateHelpCommand();
     } else {
       console.log('Please type valid command');
     }
