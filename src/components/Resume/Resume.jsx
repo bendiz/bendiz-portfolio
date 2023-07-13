@@ -153,6 +153,7 @@ export default function Resume() {
                 onChange={updateConsole}
                 placeholder="Type /help for more commands"
               />
+              <span className="cursorMarker yellow">|</span>
             </form>
           </div>
         </div>
