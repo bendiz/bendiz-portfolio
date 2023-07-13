@@ -9,10 +9,10 @@ export default function Resume() {
   const [consoleMessage, setConsoleMessage] = useState('');
   const [cursorMarker, setCursorMarker] = useState('cursor-marker');
   const [visibility, setVisibility] = useState('show');
-  const fieldCursor = classNames(cursorMarker, visibility);
   const cursorClassName = 'custom-cursor';
   const textClass = 'text';
   const typewriterText = classNames(cursorClassName, textClass);
+
   const handleHelp = (e) => {
     e.preventDefault();
     if (consoleMessage === 'help') {
@@ -62,14 +62,15 @@ export default function Resume() {
           </div>
         </div>
         <div className="terminal--window">
-          <p>
-            <span className="terminal--arrow">&gt;</span> Welcome!
-          </p>
-          <p>
-            <span className="terminal--arrow">&gt;</span> This terminal is
-            interactive...
-          </p>
-          <br />
+          <div className="intro--section">
+            <p>
+              <span className="terminal--arrow">&gt;</span> Welcome!
+            </p>
+            <p>
+              <span className="terminal--arrow">&gt;</span> This terminal is
+              interactive...
+            </p>
+          </div>
           <div className="terminal--section">
             <div className="command-section">
               <p>
@@ -167,10 +168,10 @@ export default function Resume() {
                       )
                     }
                   />
-                  <span
-                    className={classNames('placeholder', 'yellow', visibility)}
-                  >
-                    &gt; Type /help for more commands
+                  <span className={classNames('placeholder', 'yellow')}>
+                    {visibility === 'hidden'
+                      ? '$'
+                      : '> ' + 'Type /help for more commands..'}
                     <span
                       className={classNames(visibility, 'yellow', cursorMarker)}
                     >

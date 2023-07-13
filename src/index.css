@@ -10,14 +10,31 @@
   margin: 0;
 }
 
+/* Background + font-size */
 html {
+  background: linear-gradient(
+    111.5deg,
+    rgb(228, 247, 255) 21.9%,
+    rgb(243, 226, 255) 92.2%
+  );
   font-size: 62.5%;
+  height: 100vh;
+  background-size: 200%;
+  -webkit-animation: backgroundRoll 15s ease-out infinite;
+  animation: backgroundRoll 15s ease-out infinite;
 }
 
-/* Resume */
-
-html {
-  background-color: #ffe4e6;
+/* Background animation */
+@keyframes backgroundRoll {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 .Resume {
@@ -62,7 +79,6 @@ input[type='help'] {
   font-family: 'Source Code Pro';
   font-size: 1em;
   background-color: transparent;
-  border: 0;
   border: none;
   -webkit-appearance: none;
   -ms-appearance: none;
@@ -159,16 +175,16 @@ input:focus {
   position: relative;
 }
 
-.terminal--window > p:first-of-type {
+.intro--section > p:first-of-type {
   padding-top: 2.5em;
 }
 
-.terminal--window > p:first-of-type,
-.terminal--window > p:nth-of-type(-n + 2) {
+.intro--section > p:first-of-type,
+.intro--section > p:nth-of-type(-n + 2) {
   color: #fff;
 }
 
-.terminal--window > p,
+.intro--section > p,
 .command-section,
 .help-function {
   padding: 0 1em;
@@ -206,8 +222,40 @@ input:focus {
   position: relative;
 }
 
+input[type='help'] {
+  position: absolute;
+  bottom: 0;
+  left: 1em;
+}
+
 .placeholder {
   position: absolute;
-  top: 0.3em;
-  left: 0.6em;
+  bottom: 0.3em;
+  left: 0;
+}
+
+@media only screen and (max-width: 450px) {
+  .intro--section {
+    display: none;
+  }
+
+  .terminal--section {
+    padding-top: 2.5em;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .terminal--section {
+    padding-top: 1.5em;
+  }
+}
+
+@media only screen and (max-width: 365px) {
+  .terminal {
+    display: none;
+  }
+
+  .Resume > h1 {
+    font-size: 4.5rem;
+  }
 }
