@@ -1,10 +1,10 @@
 import React from 'react';
-import Resume from './components/Resume/Resume.jsx';
+import Terminal from './components/Resume/Terminal.jsx';
 
 export default function App() {
   return (
     <>
-      <Resume />
+      <Terminal />
     </>
   );
 }
