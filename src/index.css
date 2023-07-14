@@ -1,4 +1,5 @@
 :root {
+  --dark-color-1: #22212c;
   --yellow: #f6f67d;
   --blue: #79eedd;
   --pink: #e776b1;
@@ -37,7 +38,9 @@ html {
   }
 }
 
-.Resume {
+/* TERMINAL */
+
+.Terminal {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -47,22 +50,22 @@ html {
   font-size: 1.6rem;
 }
 
-.Resume > h1 {
+.Terminal > h1 {
   font-family: 'Montserrat';
-  font-weight: 800;
+  font-weight: 400;
   margin-block: 8rem 2rem;
   font-size: 6rem;
   line-height: 1;
   max-width: 800px;
 }
 
-.Resume p.text {
+.Terminal p.text {
   padding: 2rem 0;
   max-width: 800px;
   margin: 0 auto;
 }
 
-.Resume a {
+.Terminal a {
   text-decoration: none;
   color: var(--blue);
 }
@@ -128,6 +131,7 @@ input:focus {
 }
 
 .terminal--tab {
+  z-index: 1;
   position: relative;
   top: 1em;
   --tab-ratio: 10 / 800;
@@ -175,19 +179,19 @@ input:focus {
   position: relative;
 }
 
+.intro--section {
+  color: #fff;
+  padding-bottom: 0.5em;
+}
+
 .intro--section > p:first-of-type {
   padding-top: 2.5em;
 }
 
-.intro--section > p:first-of-type,
-.intro--section > p:nth-of-type(-n + 2) {
-  color: #fff;
-}
-
-.intro--section > p,
+.intro--section,
 .command-section,
 .help-function {
-  padding: 0 1em;
+  padding-inline: 1em;
 }
 
 .terminal--window .command-section {
@@ -234,6 +238,10 @@ input[type='help'] {
   left: 0;
 }
 
+/* MEDIA QUERIES */
+
+/* Terminal related media queries */
+
 @media only screen and (max-width: 450px) {
   .intro--section {
     display: none;
@@ -241,6 +249,10 @@ input[type='help'] {
 
   .terminal--section {
     padding-top: 2.5em;
+  }
+
+  .help-function {
+    display: none;
   }
 }
 
@@ -254,8 +266,7 @@ input[type='help'] {
   .terminal {
     display: none;
   }
-
-  .Resume > h1 {
+  .Terminal > h1 {
     font-size: 4.5rem;
   }
 }

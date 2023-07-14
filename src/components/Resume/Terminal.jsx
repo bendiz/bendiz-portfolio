@@ -1,11 +1,9 @@
 import { React, useState } from 'react';
-import Experience from './Experience';
-import Skills from './Skills';
 import { TypeAnimation } from 'react-type-animation';
 import 'animate.css';
 import classNames from 'classnames';
 
-export default function Resume() {
+export default function Terminal() {
   const [consoleMessage, setConsoleMessage] = useState('');
   const [cursorMarker, setCursorMarker] = useState('cursor-marker');
   const [visibility, setVisibility] = useState('show');
@@ -30,7 +28,7 @@ export default function Resume() {
   };
 
   return (
-    <article className="Resume">
+    <article className="Terminal">
       <h1 className="animate__animated animate__bounceIn">
         BENEDICTE W. ROKSVÅG
       </h1>
@@ -73,78 +71,77 @@ export default function Resume() {
           </div>
           <div className="terminal--section">
             <div className="command-section">
-              <p>
-                <h2 className="terminal--heading">
-                  <span className="terminal--arrow">&gt;</span>{' '}
-                  Benedicte.education
-                </h2>
-
-                <span className="yellow">
-                  "Information Technology @ Molde University College"
-                </span>
-              </p>
+              <h2 className="terminal--heading">
+                <span className="terminal--arrow">&gt;</span>{' '}
+                Benedicte.education
+              </h2>
+              <span className="yellow">"Information Technology"</span>
             </div>
             <div className="command-section">
-              <p>
-                <h2 className="terminal--heading">
-                  <span className="terminal--arrow">&gt;</span>{' '}
-                  Benedicte.contactMe
-                </h2>
-                [<span className="yellow"></span>
-                <a
-                  href="mailto:benedicte.roksvag@gmail.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  "benedicte.roksvag@gmail.com"
-                </a>
-                ,&nbsp;
-                <a href="http://" target="_blank" rel="noopener noreferrer">
-                  "LinkedIn"
-                </a>
-                ]
-              </p>
+              <h2 className="terminal--heading">
+                <span className="terminal--arrow">&gt;</span>{' '}
+                Benedicte.contactMe
+              </h2>
+              [<span className="yellow"></span>
+              <a
+                href="mailto:benedicte.roksvag@gmail.com"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                "benedicte.roksvag@gmail.com"
+              </a>
+              ,&nbsp;
+              <a
+                href="http://www.linkedin.com/in/benedicte-w-roksvaag"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                "LinkedIn"
+              </a>
+              ]
             </div>
             <div className="command-section">
-              <p>
-                <h2 className="terminal--heading">
-                  <span className="terminal-arrow">&gt;</span> Benedicte.resume
-                </h2>
-                [
-                <a
-                  href="https://www.google.com"
-                  target="blank"
-                  rel="noopener noreferrer"
-                >
-                  "Resume.pdf"
-                </a>
-                ]
-              </p>
+              <h2 className="terminal--heading">
+                <span className="terminal--arrow">&gt;</span>{' '}
+                Benedicte.techSkills
+              </h2>
+              [
+              <span className="yellow">
+                "HTML, CSS, JavaScript, React, Git, Github"
+              </span>
+              ]
             </div>
             <div className="command-section">
-              <p>
-                <h2 className="terminal--heading">
-                  <span className="terminal-arrow">&gt;</span>{' '}
-                  Benedicte.projects
-                </h2>
-                [
-                <a
-                  href="https://www.google.com"
-                  target="blank"
-                  rel="noopener noreferrer"
-                >
-                  "Project1"
-                </a>
-                ,{' '}
-                <a
-                  href="https://www.google.com"
-                  target="blank"
-                  rel="noopener noreferrer"
-                >
-                  "Project2"
-                </a>
-                ]
-              </p>
+              <h2 className="terminal--heading">
+                <span className="terminal-arrow">&gt;</span> Benedicte.resume
+              </h2>
+              [
+              <a
+                href="benedicte-cv-english.pdf"
+                target="blank"
+                rel="noopener noreferrer"
+              >
+                "Resume.pdf"
+              </a>
+              ]
+            </div>
+            <div className="command-section">
+              <h2 className="terminal--heading">
+                <span className="terminal-arrow">&gt;</span> Benedicte.projects
+              </h2>
+              [
+              <a href="" target="blank" rel="noopener noreferrer">
+                "Tenzi Game"
+              </a>
+              ,{' '}
+              <a
+                href="https://www.google.com"
+                target="blank"
+                rel="noopener noreferrer"
+              >
+                "Weather App"
+              </a>
+              ]
             </div>
           </div>
           <div className="help-function">
@@ -155,7 +152,7 @@ export default function Resume() {
                     type="help"
                     name="help"
                     id="help"
-                    // autoFocus
+                    autoComplete="off"
                     maxLength="10"
                     minLength="4"
                     onChange={updateConsole}
