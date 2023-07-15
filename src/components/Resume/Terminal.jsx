@@ -1,28 +1,28 @@
-import { React, useState } from 'react';
-import { TypeAnimation } from 'react-type-animation';
-import 'animate.css';
-import classNames from 'classnames';
+import { React, useState } from "react";
+import { TypeAnimation } from "react-type-animation";
+import "animate.css";
+import classNames from "classnames";
 
 export default function Terminal() {
-  const [consoleMessage, setConsoleMessage] = useState('');
-  const [cursorMarker, setCursorMarker] = useState('cursor-marker');
-  const [visibility, setVisibility] = useState('show');
-  const cursorClassName = 'custom-cursor';
-  const textClass = 'text';
+  const [consoleMessage, setConsoleMessage] = useState("");
+  const [cursorMarker, setCursorMarker] = useState("cursor-marker");
+  const [visibility, setVisibility] = useState("show");
+  const cursorClassName = "custom-cursor";
+  const textClass = "text";
   const typewriterText = classNames(cursorClassName, textClass);
 
   const handleHelp = (e) => {
     e.preventDefault();
-    if (consoleMessage === '/help') {
+    if (consoleMessage === "/help") {
       activateHelpCommand();
     } else {
-      console.log('Please type valid command');
+      console.log("Please type valid command");
     }
   };
 
   const updateConsole = (e) => {
     if (consoleMessage) {
-      setVisibility('hidden');
+      setVisibility("hidden");
     }
     setConsoleMessage(e.target.value.toLowerCase().trim());
   };
@@ -30,22 +30,25 @@ export default function Terminal() {
   return (
     <article className="Terminal">
       <h1 className="animate__animated animate__bounceIn">
-        BENEDICTE W. ROKSVÅG
+        I am <span className="heading pink">Benedicte</span> <br />
+        Roksvåg
       </h1>
       <TypeAnimation
         aria-hidden="true"
         sequence={[
-          'Information Technology Student // ',
+          "Information Technology Student // ",
           200,
           `Information Technology Student // Front-End Developer`,
-          4000,
+          1000,
+          "Information Technology Student // Front-End Developer based in Kristiansund, Norway.",
+          2000,
           (el) => el.classList.remove(cursorClassName),
           200,
           (el) => el.classList.add(cursorClassName),
         ]}
         wrapper="p"
         speed={70}
-        repeat={Infinity}
+        repeat={0}
         cursor={false}
         className={typewriterText}
       />
@@ -72,14 +75,14 @@ export default function Terminal() {
           <div className="terminal--section">
             <div className="command-section">
               <h2 className="terminal--heading">
-                <span className="terminal--arrow">&gt;</span>{' '}
+                <span className="terminal--arrow">&gt;</span>{" "}
                 Benedicte.education
               </h2>
               <span className="yellow">"Information Technology"</span>
             </div>
             <div className="command-section">
               <h2 className="terminal--heading">
-                <span className="terminal--arrow">&gt;</span>{' '}
+                <span className="terminal--arrow">&gt;</span>{" "}
                 Benedicte.contactMe
               </h2>
               [<span className="yellow"></span>
@@ -102,7 +105,7 @@ export default function Terminal() {
             </div>
             <div className="command-section">
               <h2 className="terminal--heading">
-                <span className="terminal--arrow">&gt;</span>{' '}
+                <span className="terminal--arrow">&gt;</span>{" "}
                 Benedicte.techSkills
               </h2>
               [
@@ -133,7 +136,7 @@ export default function Terminal() {
               <a href="" target="blank" rel="noopener noreferrer">
                 "Tenzi Game"
               </a>
-              ,{' '}
+              ,{" "}
               <a
                 href="https://www.google.com"
                 target="blank"
@@ -156,21 +159,21 @@ export default function Terminal() {
                     maxLength="10"
                     minLength="4"
                     onChange={updateConsole}
-                    onFocus={() => setVisibility('hidden')}
+                    onFocus={() => setVisibility("hidden")}
                     onBlur={() =>
-                      setVisibility('').then(
-                        setConsoleMessage('').then(
-                          setCursorMarker('cursor-marker')
+                      setVisibility("").then(
+                        setConsoleMessage("").then(
+                          setCursorMarker("cursor-marker")
                         )
                       )
                     }
                   />
-                  <span className={classNames('placeholder', 'yellow')}>
-                    {visibility === 'hidden'
-                      ? '$'
-                      : '> ' + 'Type /help for more commands..'}
+                  <span className={classNames("placeholder", "yellow")}>
+                    {visibility === "hidden"
+                      ? "$"
+                      : "> " + "Type /help for more commands.."}
                     <span
-                      className={classNames(visibility, 'yellow', cursorMarker)}
+                      className={classNames(visibility, "yellow", cursorMarker)}
                     >
                       |
                     </span>
