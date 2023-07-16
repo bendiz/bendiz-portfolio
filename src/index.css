@@ -10,6 +10,7 @@
   padding: 0;
   margin: 0;
   text-decoration: none;
+  scroll-behavior: smooth;
 }
 
 /* Background + font-size */
@@ -68,7 +69,7 @@ html {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-inline: 2rem;
+  margin-inline: 2em;
   font-family: "Source Code Pro";
   line-height: 1.5;
   font-size: 1.6rem;
@@ -152,6 +153,7 @@ input:focus {
 /* Terminal window */
 .terminal {
   width: 100%;
+  margin-bottom: calc(2rem + 15px);
 }
 
 .terminal--heading {
@@ -213,6 +215,9 @@ input:focus {
   font-size: 0.7em;
   color: #fff;
   position: relative;
+  overflow-y: scroll;
+  display: flex;
+  flex-direction: column;
 }
 
 .intro--section {
@@ -244,10 +249,9 @@ input:focus {
 }
 /* HELP SECTION */
 .help-function {
-  position: absolute;
-  bottom: 1.5em;
-  display: inline-block;
   width: 100%;
+  margin-top: auto;
+  padding-bottom: 1em;
 }
 
 .cursor-marker {
@@ -260,12 +264,6 @@ input:focus {
 
 .input-group {
   position: relative;
-}
-
-input[type="help"] {
-  position: absolute;
-  bottom: 0;
-  left: 1em;
 }
 
 .placeholder {

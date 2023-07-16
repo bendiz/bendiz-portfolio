@@ -146,6 +146,60 @@ export default function Terminal() {
               </a>
               ]
             </div>
+            <div className="command-section">
+              <h2 className="terminal--heading">
+                <span className="terminal-arrow">&gt;</span> Benedicte.projects
+              </h2>
+              [
+              <a href="" target="blank" rel="noopener noreferrer">
+                "Tenzi Game"
+              </a>
+              ,{" "}
+              <a
+                href="https://www.google.com"
+                target="blank"
+                rel="noopener noreferrer"
+              >
+                "Weather App"
+              </a>
+              ]
+            </div>
+            <div className="command-section">
+              <h2 className="terminal--heading">
+                <span className="terminal-arrow">&gt;</span> Benedicte.projects
+              </h2>
+              [
+              <a href="" target="blank" rel="noopener noreferrer">
+                "Tenzi Game"
+              </a>
+              ,{" "}
+              <a
+                href="https://www.google.com"
+                target="blank"
+                rel="noopener noreferrer"
+              >
+                "Weather App"
+              </a>
+              ]
+            </div>
+            <div className="command-section">
+              <h2 className="terminal--heading">
+                <span className="terminal-arrow">&gt;</span> Benedicte.projects
+              </h2>
+              [
+              <a href="" target="blank" rel="noopener noreferrer">
+                "Tenzi Game"
+              </a>
+              ,{" "}
+              <a
+                href="https://www.google.com"
+                target="blank"
+                rel="noopener noreferrer"
+              >
+                "Weather App"
+              </a>
+              ]
+            </div>
           </div>
           <div className="help-function">
             <form id="help-form" onSubmit={handleHelp}>
