@@ -38,17 +38,24 @@ html {
   padding: 0 1em;
 }
 
-.Navigation a {
+.Navigation li a {
   color: #000;
 }
 
-.Navigation a:hover {
+.Navigation .contact--button:hover {
+  cursor: pointer;
+  background-color: var(--pink);
+  color: #fff;
+  transition: all 0.5s ease;
+}
+
+.Navigation li a:hover {
   color: #000;
   border-bottom: 4px solid var(--pink);
-  zoom: 1.02;
+  transition: all 0.5s ease;
 }
 
-.Navigation button {
+.Navigation .contact--button {
   font-family: "Source Code Pro";
   font-weight: 600;
   padding: 0.6em 2em;

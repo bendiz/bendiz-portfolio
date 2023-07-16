@@ -21,7 +21,9 @@ export default function Navigation() {
             <a href="">Projects</a>
           </li>
         </ul>
-        <button>Contact</button>
+        <a role="button" className="contact--button">
+          Contact
+        </a>
       </div>
     </nav>
   );
