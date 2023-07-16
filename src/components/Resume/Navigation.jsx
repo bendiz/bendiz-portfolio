@@ -21,7 +21,12 @@ export default function Navigation() {
             <a href="">Projects</a>
           </li>
         </ul>
-        <a role="button" className="contact--button">
+        <a
+          role="button"
+          className="contact--button"
+          href="mailto:benedicte.roksvag@gmail.com"
+          rel="noopener noreferrer"
+        >
           Contact
         </a>
       </div>

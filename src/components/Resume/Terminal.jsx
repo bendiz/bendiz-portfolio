@@ -28,7 +28,7 @@ export default function Terminal() {
   };
 
   return (
-    <article className="Terminal">
+    <section className="Terminal">
       <h1 className="animate__animated animate__bounceIn">
         I am <span className="heading pink">Benedicte</span> <br />
         Roksvåg
@@ -238,6 +238,6 @@ export default function Terminal() {
           </div>
         </div>
       </div>
-    </article>
+    </section>
   );
 }
