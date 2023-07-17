@@ -36,11 +36,9 @@ export default function Terminal() {
       <TypeAnimation
         aria-hidden="true"
         sequence={[
-          "Information Technology Student // ",
-          200,
-          `Information Technology Student // Front-End Developer`,
+          `Front-end developer`,
           1000,
-          "Information Technology Student // Front-End Developer based in Kristiansund, Norway.",
+          "Front-end developer based in Kristiansund, Norway.",
           2000,
           (el) => el.classList.remove(cursorClassName),
           200,
@@ -74,17 +72,17 @@ export default function Terminal() {
           </div>
           <div className="terminal--section">
             <div className="command-section">
-              <h2 className="terminal--heading">
+              <h3 className="terminal--heading">
                 <span className="terminal--arrow">&gt;</span>{" "}
                 Benedicte.education
-              </h2>
+              </h3>
               <span className="yellow">"Information Technology"</span>
             </div>
             <div className="command-section">
-              <h2 className="terminal--heading">
+              <h3 className="terminal--heading">
                 <span className="terminal--arrow">&gt;</span>{" "}
                 Benedicte.contactMe
-              </h2>
+              </h3>
               [<span className="yellow"></span>
               <a
                 href="mailto:benedicte.roksvag@gmail.com"
@@ -104,10 +102,10 @@ export default function Terminal() {
               ]
             </div>
             <div className="command-section">
-              <h2 className="terminal--heading">
+              <h3 className="terminal--heading">
                 <span className="terminal--arrow">&gt;</span>{" "}
                 Benedicte.techSkills
-              </h2>
+              </h3>
               [
               <span className="yellow">
                 "HTML, CSS, JavaScript, React, Git, Github"
@@ -115,9 +113,9 @@ export default function Terminal() {
               ]
             </div>
             <div className="command-section">
-              <h2 className="terminal--heading">
+              <h3 className="terminal--heading">
                 <span className="terminal-arrow">&gt;</span> Benedicte.resume
-              </h2>
+              </h3>
               [
               <a
                 href="benedicte-cv-english.pdf"
@@ -129,9 +127,9 @@ export default function Terminal() {
               ]
             </div>
             <div className="command-section">
-              <h2 className="terminal--heading">
+              <h3 className="terminal--heading">
                 <span className="terminal-arrow">&gt;</span> Benedicte.projects
-              </h2>
+              </h3>
               [
               <a href="" target="blank" rel="noopener noreferrer">
                 "Tenzi Game"
@@ -147,9 +145,9 @@ export default function Terminal() {
               ]
             </div>
             <div className="command-section">
-              <h2 className="terminal--heading">
+              <h3 className="terminal--heading">
                 <span className="terminal-arrow">&gt;</span> Benedicte.projects
-              </h2>
+              </h3>
               [
               <a href="" target="blank" rel="noopener noreferrer">
                 "Tenzi Game"
@@ -165,9 +163,9 @@ export default function Terminal() {
               ]
             </div>
             <div className="command-section">
-              <h2 className="terminal--heading">
+              <h3 className="terminal--heading">
                 <span className="terminal-arrow">&gt;</span> Benedicte.projects
-              </h2>
+              </h3>
               [
               <a href="" target="blank" rel="noopener noreferrer">
                 "Tenzi Game"
@@ -183,9 +181,9 @@ export default function Terminal() {
               ]
             </div>
             <div className="command-section">
-              <h2 className="terminal--heading">
+              <h3 className="terminal--heading">
                 <span className="terminal-arrow">&gt;</span> Benedicte.projects
-              </h2>
+              </h3>
               [
               <a href="" target="blank" rel="noopener noreferrer">
                 "Tenzi Game"

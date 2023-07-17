@@ -18,7 +18,7 @@ export default function Navigation() {
             <a href="">Resume</a>
           </li>
           <li>
-            <a href="">Projects</a>
+            <a href="#projects">Projects</a>
           </li>
         </ul>
         <a
