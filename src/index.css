@@ -21,15 +21,15 @@ html {
   font-family: "Source Code Pro";
 }
 
+section {
+  margin-bottom: 5rem;
+}
+
 h2 {
   font-family: "Montserrat";
   font-size: 4rem;
   line-height: 0.9;
   padding-block: 4rem;
-}
-
-section {
-  margin-bottom: 10rem;
 }
 
 .Navigation {
@@ -127,6 +127,10 @@ section {
 
 .pink {
   color: var(--pink);
+}
+
+.invalid {
+  color: rgb(255, 22, 22);
 }
 
 ::placeholder {
@@ -278,6 +282,10 @@ input:focus {
 
 .hidden {
   display: none;
+}
+
+input {
+  text-indent: 10px;
 }
 
 .input-group {

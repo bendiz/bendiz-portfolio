@@ -5,7 +5,6 @@ export default function Navigation() {
         <img
           src="./B-logo.svg"
           alt="A logo with curly braces covering the letter B."
-          srcset=""
           className="logo"
         />
       </div>

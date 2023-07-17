@@ -5,18 +5,54 @@ import classNames from "classnames";
 
 export default function Terminal() {
   const [consoleMessage, setConsoleMessage] = useState("");
+  const [consoleLine, setNewConsoleLine] = useState("");
+  const [validCommand, setInvalidCommand] = useState("");
   const [cursorMarker, setCursorMarker] = useState("cursor-marker");
   const [visibility, setVisibility] = useState("show");
   const cursorClassName = "custom-cursor";
   const textClass = "text";
   const typewriterText = classNames(cursorClassName, textClass);
+  const funfacts = [];
 
   const handleHelp = (e) => {
+    const listOfCommands = [
+      "help",
+      "funfact",
+      "family",
+      "hobbies",
+      "motivation",
+    ];
     e.preventDefault();
-    if (consoleMessage === "/help") {
-      activateHelpCommand();
+    console.log(consoleMessage);
+    if (consoleMessage == "/help" || consoleMessage === "help") {
+      setNewConsoleLine(
+        <div className="command-section">
+          <p className="yellow">
+            <span className="terminal--arrow">&gt;</span> List of available
+            commands: <br />
+            /funfact
+            <br />
+            /family
+            <br />
+            /hobbies
+            <br />
+            /motivation
+          </p>
+        </div>
+      );
+    } else if (consoleMessage == "clear") {
+      setInvalidCommand("");
     } else {
+      setInvalidCommand(
+        <div className="command-section">
+          <p className="invalid">
+            <span className="terminal--arrow">&gt;</span> Please input a valid
+            command or /help for a list of commands
+          </p>
+        </div>
+      );
       console.log("Please type valid command");
+      console.log(consoleMessage);
     }
   };
 
@@ -26,6 +62,8 @@ export default function Terminal() {
     }
     setConsoleMessage(e.target.value.toLowerCase().trim());
   };
+
+  const activateHelpCommand = () => {};
 
   return (
     <section className="Terminal">
@@ -76,7 +114,9 @@ export default function Terminal() {
                 <span className="terminal--arrow">&gt;</span>{" "}
                 Benedicte.education
               </h3>
-              <span className="yellow">"Information Technology"</span>
+              <span className="yellow">
+                "Information Technology @ Molde University College"
+              </span>
             </div>
             <div className="command-section">
               <h3 className="terminal--heading">
@@ -135,69 +175,17 @@ export default function Terminal() {
                 "Tenzi Game"
               </a>
               ,{" "}
-              <a
-                href="https://www.google.com"
-                target="blank"
-                rel="noopener noreferrer"
-              >
-                "Weather App"
-              </a>
-              ]
-            </div>
-            <div className="command-section">
-              <h3 className="terminal--heading">
-                <span className="terminal-arrow">&gt;</span> Benedicte.projects
-              </h3>
-              [
               <a href="" target="blank" rel="noopener noreferrer">
-                "Tenzi Game"
+                "Weather App"
               </a>
               ,{" "}
-              <a
-                href="https://www.google.com"
-                target="blank"
-                rel="noopener noreferrer"
-              >
-                "Weather App"
-              </a>
-              ]
-            </div>
-            <div className="command-section">
-              <h3 className="terminal--heading">
-                <span className="terminal-arrow">&gt;</span> Benedicte.projects
-              </h3>
-              [
               <a href="" target="blank" rel="noopener noreferrer">
-                "Tenzi Game"
-              </a>
-              ,{" "}
-              <a
-                href="https://www.google.com"
-                target="blank"
-                rel="noopener noreferrer"
-              >
-                "Weather App"
+                "Notes App"
               </a>
               ]
             </div>
-            <div className="command-section">
-              <h3 className="terminal--heading">
-                <span className="terminal-arrow">&gt;</span> Benedicte.projects
-              </h3>
-              [
-              <a href="" target="blank" rel="noopener noreferrer">
-                "Tenzi Game"
-              </a>
-              ,{" "}
-              <a
-                href="https://www.google.com"
-                target="blank"
-                rel="noopener noreferrer"
-              >
-                "Weather App"
-              </a>
-              ]
-            </div>
+            {consoleMessage !== "/help" && validCommand}
+            {consoleLine}
           </div>
           <div className="help-function">
             <form id="help-form" onSubmit={handleHelp}>
