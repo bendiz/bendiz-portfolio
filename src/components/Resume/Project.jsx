@@ -1,9 +1,11 @@
 import React from "react";
-export default function Project({ src, alt, github, children, live }) {
+export default function Project({ title, src, alt, github, children, live }) {
   return (
-    <div className="project">
+    <div className="project--container">
       <img src={src} alt={alt} className="project--img" />
-      <div className="project--description">
+      <h3 className="project--text project--title">{title}</h3>
+      <div className="project--description project--text">
+        <p>{children}</p>
         <ul className="project--links">
           <a
             href={github}
@@ -22,7 +24,6 @@ export default function Project({ src, alt, github, children, live }) {
             View Live
           </a>
         </ul>
-        <p>{children}</p>
       </div>
     </div>
   );
