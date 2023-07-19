@@ -53,26 +53,10 @@ h2 {
   color: #000;
 }
 
-.Navigation .contact--button:hover {
-  cursor: pointer;
-  background-color: var(--pink);
-  color: #fff;
-  transition: all 0.5s ease;
-}
-
 .Navigation li a:hover {
   color: #000;
   border-bottom: 4px solid var(--pink);
   transition: all 0.5s ease;
-}
-
-.Navigation .contact--button {
-  font-family: "Source Code Pro";
-  font-weight: 600;
-  padding: 0.6em 2em;
-  border: 1px solid var(--pink);
-  border-radius: 5px;
-  color: var(--pink);
 }
 
 .Navigation .nav--right {
@@ -319,9 +303,11 @@ input {
     rgba(0, 0, 0, 0.22) 0px 10px 10px;
 }
 
+.projects > h2 {
+  text-align: center;
+}
 .projects > h2 .heading {
   display: block;
-  text-align: center;
 }
 
 .projects--cards {
@@ -351,11 +337,30 @@ input {
   gap: 2rem;
 }
 
-.project--link {
-  padding: 1rem 2rem;
+/* Buttons  */
+.primary,
+.secondary {
+  font-family: "Source Code Pro";
+  font-weight: 600;
+  padding: 0.6em 2em;
   border-radius: 5px;
-  background-color: #2b2640;
-  color: var(--blue);
+}
+
+.primary {
+  background-color: var(--pink);
+  color: #fff;
+}
+
+.secondary {
+  border: 1px solid var(--pink);
+  color: var(--pink);
+}
+
+.secondary:hover {
+  cursor: pointer;
+  background-color: var(--pink);
+  color: #fff;
+  transition: all 0.5s ease;
 }
 
 /* MEDIA QUERIES */

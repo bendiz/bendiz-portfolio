@@ -1,4 +1,5 @@
 import React from "react";
+import Button from "./Button";
 export default function Project({ title, src, alt, github, children, live }) {
   return (
     <div className="project--container">
@@ -7,22 +8,12 @@ export default function Project({ title, src, alt, github, children, live }) {
       <div className="project--description project--text">
         <p>{children}</p>
         <ul className="project--links">
-          <a
-            href={github}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="project--link"
-          >
+          <Button theme="primary" href={github} className="project--link">
             View Github
-          </a>
-          <a
-            href={live}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="project--link"
-          >
+          </Button>
+          <Button theme="secondary" href={live} className="project--link">
             View Live
-          </a>
+          </Button>
         </ul>
       </div>
     </div>

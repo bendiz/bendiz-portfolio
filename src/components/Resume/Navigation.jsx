@@ -1,3 +1,4 @@
+import Button from "./Button";
 export default function Navigation() {
   return (
     <nav className="Navigation">
@@ -20,14 +21,13 @@ export default function Navigation() {
             <a href="#projects">Projects</a>
           </li>
         </ul>
-        <a
-          role="button"
-          className="contact--button"
+        <Button
+          theme="secondary"
           href="mailto:benedicte.roksvag@gmail.com"
-          rel="noopener noreferrer"
+          className="contact--button"
         >
           Contact
-        </a>
+        </Button>
       </div>
     </nav>
   );
