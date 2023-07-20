@@ -1,5 +1,7 @@
 import React from "react";
 import Button from "./Button";
+import { AiOutlineArrowRight } from "react-icons/ai";
+
 export default function Project({ title, src, alt, github, children, live }) {
   return (
     <div className="project--container">
@@ -8,11 +10,11 @@ export default function Project({ title, src, alt, github, children, live }) {
       <div className="project--description project--text">
         <p>{children}</p>
         <ul className="project--links">
-          <Button theme="primary" href={github} className="project--link">
-            View Github
+          <Button theme="secondary" href={github} className="project--link">
+            View Github <AiOutlineArrowRight />
           </Button>
           <Button theme="secondary" href={live} className="project--link">
-            View Live
+            View Live <AiOutlineArrowRight />
           </Button>
         </ul>
       </div>

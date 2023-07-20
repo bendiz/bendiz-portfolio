@@ -320,7 +320,7 @@ input {
   font-size: 1.2rem;
   display: flex;
   flex-direction: column;
-  max-height: 286px;
+  max-height: 350px;
 }
 
 .project--text {
@@ -333,12 +333,21 @@ input {
 
 .project--links {
   display: flex;
+  flex-direction: column;
+  text-align: center;
   font-size: 1.2rem;
   letter-spacing: 1px;
   text-transform: uppercase;
   margin-block: 2rem;
   gap: 2rem;
   justify-content: space-between;
+}
+
+.project--link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5em;
 }
 
 /* Buttons  */
