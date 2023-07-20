@@ -318,6 +318,9 @@ input {
 
 .project--description {
   font-size: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  max-height: 286px;
 }
 
 .project--text {
@@ -335,6 +338,7 @@ input {
   text-transform: uppercase;
   margin-block: 2rem;
   gap: 2rem;
+  justify-content: space-between;
 }
 
 /* Buttons  */

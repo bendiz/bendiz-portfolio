@@ -22,8 +22,11 @@ export default function App() {
           >
             Tenzi game made after a challenge on Scrimba.com. Implemented
             several functionalities to make it more enjoyable by my 3-year old
-            daughter. Added scoreboard with best time and best amount of rolls
-            and toggling between dice and numbers.
+            daughter. <br />
+            <br />
+            Added scoreboard with best time, best amount of rolls and toggling
+            between dice and numbers, and used the "Tippy" library for the
+            tooltips.
           </Project>
           <Project
             title="Weather Application"
@@ -32,12 +35,13 @@ export default function App() {
             live="https://bendiz.no/"
             github="https://github.com/bendiz/weather-react"
           >
-            Weather application. Started by creating a wireframe in Figma.
-            Experimented with using both openweather API and SheCodes weather
-            API to fetch weather data. Functionalities include location
-            services, fahrenheit/celsius converter, current
-            weather/humidity/temperature and 5-day forecast. Set up custom
-            domain in the progress and hosted on Netlify.
+            Created an UI wireframe in Figma. Experimented with using both
+            openweather API and SheCodes weather API to fetch weather data.
+            <br />
+            <br />
+            Added location services, fahrenheit/celsius converter, current
+            weather, humidity, temperature and 5-day forecast. Set up custom
+            domain and hosted on Netlify.
           </Project>
           <Project
             title="Notes Application"
@@ -46,9 +50,13 @@ export default function App() {
             live="https://notes-app-bendiz.netlify.app/"
             github="https://github.com/bendiz/weather-react"
           >
-            Notes app made after a challenge on Scrimba.com. Implemented
-            functionalities in addition to suggested ones. Toggling dark mode
-            and registering if user has dark mode enabled in their browser.
+            Made after a challenge on Scrimba.com. The user's notes are saved in
+            the browser and can be accessed if the user closes their browser or
+            restarts their computer. <br />
+            <br />
+            Implemented dark mode functionality, detecting if user has dark mode
+            enabled, but also providing the user freedom to toggle it on and
+            off.
           </Project>
         </div>
       </section>
