@@ -312,6 +312,7 @@ input {
 .tech-icon {
   width: 40px;
   padding-block: 1em;
+  padding-inline: 0.4em;
   /* filter: grayscale(); */
   opacity: 0.7;
 }
