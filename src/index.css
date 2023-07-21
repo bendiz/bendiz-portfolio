@@ -156,6 +156,16 @@ input:focus {
   }
 }
 
+.technologies-known {
+  opacity: 0.8;
+  margin-block: 2rem;
+}
+
+.technologies-known > img {
+  width: 60px;
+  padding-inline: 1rem;
+}
+
 /* Terminal window */
 .terminal {
   width: 100%;
@@ -286,6 +296,24 @@ input {
 
 .projects {
   margin-inline: 2rem;
+}
+
+.project--heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.technologies-used {
+  display: flex;
+  padding-right: 1em;
+}
+
+.tech-icon {
+  width: 40px;
+  padding-block: 1em;
+  /* filter: grayscale(); */
+  opacity: 0.7;
 }
 .project--container > img {
   border-radius: 5px 5px 0 0;
@@ -510,11 +538,24 @@ input {
 
 @media only screen and (min-width: 1100px) and (max-width: 1355px) {
   .projects--cards {
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: repeat(3, 1fr);
     justify-content: space-around;
   }
 
   .project--container {
     max-width: 380px;
+  }
+}
+
+@media only screen and (max-width: 520px) {
+  .technologies-known > img {
+    width: 45px;
+    padding-inline: 0.5rem;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .technologies-known {
+    display: none;
   }
 }

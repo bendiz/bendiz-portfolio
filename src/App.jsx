@@ -29,7 +29,7 @@ export default function App() {
             tooltips.
           </Project>
           <Project
-            title="Weather Application"
+            title="Weather App"
             src="./public/Weather.png"
             alt="A picture of a weather app project"
             live="https://bendiz.no/"
@@ -44,7 +44,7 @@ export default function App() {
             domain and hosted on Netlify.
           </Project>
           <Project
-            title="Notes Application"
+            title="Notes App"
             src="./public/Notes.png"
             alt="A picture of a note app project"
             live="https://notes-app-bendiz.netlify.app/"

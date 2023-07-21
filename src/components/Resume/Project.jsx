@@ -6,7 +6,15 @@ export default function Project({ title, src, alt, github, children, live }) {
   return (
     <div className="project--container">
       <img src={src} alt={alt} className="project--img" />
-      <h3 className="project--text project--title">{title}</h3>
+      <div className="project--heading">
+        <h3 className="project--text project--title">{title}</h3>
+        <div className="technologies-used">
+          <img src="./html-icon.svg" alt="" srcset="" className="tech-icon" />
+          <img src="./css-icon.svg" alt="" srcset="" className="tech-icon" />
+          <img src="./js-icon.svg" alt="" srcset="" className="tech-icon" />
+          <img src="./react-icon.svg" alt="" srcset="" className="tech-icon" />
+        </div>
+      </div>
       <div className="project--description project--text">
         <p>{children}</p>
         <ul className="project--links">

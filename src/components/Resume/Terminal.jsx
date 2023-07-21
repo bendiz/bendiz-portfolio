@@ -88,6 +88,16 @@ export default function Terminal() {
         cursor={false}
         className={typewriterText}
       />
+      <div className="technologies-known">
+        <img src="./html-icon.svg" alt="" srcset="" />
+        <img src="./css-icon.svg" alt="" srcset="" />
+        <img src="./js-icon.svg" alt="" srcset="" />
+        <img src="./react-icon.svg" alt="" srcset="" />
+        <img src="./bootstrap-icon.svg" alt="" srcset="" />
+        <img src="./git-icon.svg" alt="" srcset="" />
+        <img src="./github-icon.svg" alt="" srcset="" />
+        <img src="./netlify-icon.svg" alt="" srcset="" />
+      </div>
       <div className="terminal">
         <div className="terminal--tab">
           <div className="tab--options">
