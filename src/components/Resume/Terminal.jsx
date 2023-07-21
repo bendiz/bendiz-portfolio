@@ -2,6 +2,8 @@ import { React, useState } from "react";
 import { TypeAnimation } from "react-type-animation";
 import "animate.css";
 import classNames from "classnames";
+import Tippy from "@tippyjs/react";
+import "tippy.js/dist/tippy.css";
 
 export default function Terminal() {
   const [consoleMessage, setConsoleMessage] = useState("");
@@ -89,14 +91,30 @@ export default function Terminal() {
         className={typewriterText}
       />
       <div className="technologies-known">
-        <img src="./html-icon.svg" alt="" srcset="" />
-        <img src="./css-icon.svg" alt="" srcset="" />
-        <img src="./js-icon.svg" alt="" srcset="" />
-        <img src="./react-icon.svg" alt="" srcset="" />
-        <img src="./bootstrap-icon.svg" alt="" srcset="" />
-        <img src="./git-icon.svg" alt="" srcset="" />
-        <img src="./github-icon.svg" alt="" srcset="" />
-        <img src="./netlify-icon.svg" alt="" srcset="" />
+        <Tippy content="HTML">
+          <img src="./html-icon.svg" alt="" srcset="" id="html-icon" />
+        </Tippy>
+        <Tippy content="CSS">
+          <img src="./css-icon.svg" alt="" srcset="" />
+        </Tippy>
+        <Tippy content="JavaScript">
+          <img src="./js-icon.svg" alt="" srcset="" />
+        </Tippy>
+        <Tippy content="React">
+          <img src="./react-icon.svg" alt="" srcset="" />
+        </Tippy>
+        <Tippy content="Bootstrap">
+          <img src="./bootstrap-icon.svg" alt="" srcset="" />
+        </Tippy>
+        <Tippy content="Git">
+          <img src="./git-icon.svg" alt="" srcset="" />
+        </Tippy>
+        <Tippy content="Github">
+          <img src="./github-icon.svg" alt="" srcset="" />
+        </Tippy>
+        <Tippy content="Netlify">
+          <img src="./netlify-icon.svg" alt="" srcset="" />
+        </Tippy>
       </div>
       <div className="terminal">
         <div className="terminal--tab">
