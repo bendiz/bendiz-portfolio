@@ -289,7 +289,6 @@ input {
 }
 
 .project--container {
-  max-width: 400px;
   display: flex;
   flex-direction: column;
   margin-block: 2rem;
@@ -311,13 +310,20 @@ input {
 }
 
 .projects--cards {
-  display: flex;
-  justify-content: center;
-  gap: 2rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-items: center;
+  justify-content: space-around;
+  gap: 1rem;
+}
+
+.project--container {
+  max-width: 450px;
 }
 
 .project--description {
   font-size: 1.2rem;
+  color: #343333;
   display: flex;
   flex-direction: column;
   max-height: 350px;
@@ -337,10 +343,8 @@ input {
   text-align: center;
   font-size: 1.2rem;
   letter-spacing: 1px;
-  text-transform: uppercase;
   margin-block: 2rem;
   gap: 2rem;
-  justify-content: space-between;
 }
 
 .project--link {
@@ -380,7 +384,7 @@ input {
 
 /* Terminal related media queries */
 
-@media only screen and (max-width: 450px) {
+@media only screen and (max-width: 750px) {
   .projects > h2 {
     padding-bottom: 2rem;
   }
@@ -434,15 +438,15 @@ input {
   }
 
   .projects--cards {
-    flex-direction: column;
-    align-items: center;
+    grid-template-columns: 1fr 1fr;
   }
   .project--container {
-    max-width: 350px;
-    height: 630px;
+    max-width: 500px;
+    height: 800px;
   }
 }
 
+/* View both github and live button */
 @media only screen and (min-width: 750px) and (max-width: 1260px) {
   .project--link:first-child {
     display: flex;
@@ -451,9 +455,46 @@ input {
   .project--links {
     top: 26.5rem;
   }
+}
+
+@media only screen and (max-width: 1050px) {
+  .projects--cards {
+    grid-template-columns: 1fr;
+    justify-content: space-around;
+  }
 
   .project--container {
+    max-width: 350px;
+    height: 650px;
+  }
+}
+
+@media only screen and (min-width: 550px) and (max-width: 1050px) {
+  .projects--cards {
+    grid-template-columns: 1fr;
+    justify-content: space-around;
+  }
+
+  .project--container {
+    min-width: 450px;
     max-width: 550px;
-    height: 800px;
+    min-height: 750px;
+    height: 820px;
+  }
+}
+
+@media only screen and (max-width: 300px) {
+  .projects--cards {
+    grid-template-columns: 1fr;
+    justify-content: space-around;
+  }
+
+  .project--container {
+    max-width: 250px;
+    height: 780px;
+  }
+
+  .project--links {
+    top: 45rem;
   }
 }
