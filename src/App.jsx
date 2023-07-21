@@ -55,8 +55,7 @@ export default function App() {
             restarts their computer. <br />
             <br />
             Implemented dark mode functionality, detecting if user has dark mode
-            enabled, but also providing the user freedom to toggle it on and
-            off.
+            enabled, but also providing the user freedom to toggle.
           </Project>
         </div>
       </section>
