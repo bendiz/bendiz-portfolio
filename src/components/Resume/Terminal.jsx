@@ -7,7 +7,7 @@ import "tippy.js/dist/tippy.css";
 
 export default function Terminal() {
   const [consoleMessage, setConsoleMessage] = useState("");
-  const [validCommand, setInvalidCommand] = useState("");
+  const [invalidCommand, setInvalidCommand] = useState("");
   const [commandMessage, setCommandMessage] = useState("");
   const [cursorMarker, setCursorMarker] = useState("cursor-marker");
   const [visibility, setVisibility] = useState("show");
@@ -15,71 +15,61 @@ export default function Terminal() {
   const cursorClassName = "custom-cursor";
   const textClass = "text";
   const typewriterText = classNames(cursorClassName, textClass);
-  const funfacts = [""];
+
+  // Console command messages
+  const helpMessage = (
+    <>
+      List of available commands: <br />
+      /funfact
+      <br />
+      /family
+      <br />
+      /hobbies
+      <br />
+      /motivation"
+    </>
+  );
+  const familyMessage = (
+    <>
+      "Me and my boyfriend of eleven years (and counting) <br />
+      live with our three year old daughter and our cat Fuse"
+    </>
+  );
+  const hobbiesMessage = (
+    <>
+      "Me and my boyfriend of eleven years (and counting) <br />
+      live with our three year old daughter and our cat Fuse"
+    </>
+  );
+  const invalidMessage = (
+    <>Please input a valid command or /help for a list of commands</>
+  );
 
   const handleHelp = (e) => {
-    const listOfCommands = [
-      "help",
-      "funfact",
-      "family",
-      "hobbies",
-      "motivation",
-    ];
     e.preventDefault();
-    setInvalidCommand("");
+    setInvalidCommand(false);
     switch (consoleMessage) {
       case "/help" || "help":
-        setCommandMessage(
-          <>
-            List of available commands: <br />
-            /funfact
-            <br />
-            /family
-            <br />
-            /hobbies
-            <br />
-            /motivation"
-          </>
-        );
+        setCommandMessage(helpMessage);
         break;
       case "clear":
         setCommandMessage("");
-        setInvalidCommand("");
         break;
       case "/family" || "family":
-        setCommandMessage(
-          <>
-            "Me and my boyfriend of eleven years (and counting) <br />
-            live with our three year old daughter and our cat Fuse"
-          </>
-        );
+        setCommandMessage(familyMessage);
         break;
       case "/hobbies" || "hobbies":
-        setCommandMessage(
-          <>
-            "Me and my boyfriend of eleven years (and counting) <br />
-            live with our three year old daughter and our cat Fuse"
-          </>
-        );
+        setCommandMessage(hobbiesMessage);
         break;
       default:
-        setCommandMessage("");
-        setInvalidCommand(
-          <div className="command-section">
-            <p className="invalid">
-              <span className="terminal--arrow">&gt;</span> Please input a valid
-              command or /help for a list of commands
-            </p>
-          </div>
-        );
+        setInvalidCommand(true);
+        setCommandMessage(invalidMessage);
         break;
     }
   };
 
   const updateConsole = (e) => {
-    if (consoleMessage) {
-      setVisibility("hidden");
-    }
+    consoleMessage && setVisibility("hidden");
     setConsoleMessage(e.target.value.toLowerCase().trim());
   };
 
@@ -230,12 +220,11 @@ export default function Terminal() {
             </div>
             {commandMessage && (
               <div className="command-section">
-                <p className="yellow">
+                <p className={invalidCommand ? "invalid" : "yellow"}>
                   <span className="terminal--arrow">&gt;</span> {commandMessage}
                 </p>
               </div>
             )}
-            {validCommand}
           </div>
           <div className="help-function">
             <form id="help-form" onSubmit={handleHelp}>
