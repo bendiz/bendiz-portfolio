@@ -1,4 +1,4 @@
-import { React, useState } from "react";
+import { React, useState, useEffect } from "react";
 import { TypeAnimation } from "react-type-animation";
 import "animate.css";
 import classNames from "classnames";
@@ -7,14 +7,15 @@ import "tippy.js/dist/tippy.css";
 
 export default function Terminal() {
   const [consoleMessage, setConsoleMessage] = useState("");
-  const [consoleLine, setNewConsoleLine] = useState("");
   const [validCommand, setInvalidCommand] = useState("");
+  const [commandMessage, setCommandMessage] = useState("");
   const [cursorMarker, setCursorMarker] = useState("cursor-marker");
   const [visibility, setVisibility] = useState("show");
+
   const cursorClassName = "custom-cursor";
   const textClass = "text";
   const typewriterText = classNames(cursorClassName, textClass);
-  const funfacts = [];
+  const funfacts = [""];
 
   const handleHelp = (e) => {
     const listOfCommands = [
@@ -25,36 +26,53 @@ export default function Terminal() {
       "motivation",
     ];
     e.preventDefault();
-    console.log(consoleMessage);
-    if (consoleMessage == "/help" || consoleMessage === "help") {
-      setNewConsoleLine(
-        <div className="command-section">
-          <p className="yellow">
-            <span className="terminal--arrow">&gt;</span> List of available
-            commands: <br />
+    setInvalidCommand("");
+    switch (consoleMessage) {
+      case "/help" || "help":
+        setCommandMessage(
+          <>
+            List of available commands: <br />
             /funfact
             <br />
             /family
             <br />
             /hobbies
             <br />
-            /motivation
-          </p>
-        </div>
-      );
-    } else if (consoleMessage == "clear") {
-      setInvalidCommand("");
-    } else {
-      setInvalidCommand(
-        <div className="command-section">
-          <p className="invalid">
-            <span className="terminal--arrow">&gt;</span> Please input a valid
-            command or /help for a list of commands
-          </p>
-        </div>
-      );
-      console.log("Please type valid command");
-      console.log(consoleMessage);
+            /motivation"
+          </>
+        );
+        break;
+      case "clear":
+        setCommandMessage("");
+        setInvalidCommand("");
+        break;
+      case "/family" || "family":
+        setCommandMessage(
+          <>
+            "Me and my boyfriend of eleven years (and counting) <br />
+            live with our three year old daughter and our cat Fuse"
+          </>
+        );
+        break;
+      case "/hobbies" || "hobbies":
+        setCommandMessage(
+          <>
+            "Me and my boyfriend of eleven years (and counting) <br />
+            live with our three year old daughter and our cat Fuse"
+          </>
+        );
+        break;
+      default:
+        setCommandMessage("");
+        setInvalidCommand(
+          <div className="command-section">
+            <p className="invalid">
+              <span className="terminal--arrow">&gt;</span> Please input a valid
+              command or /help for a list of commands
+            </p>
+          </div>
+        );
+        break;
     }
   };
 
@@ -64,8 +82,6 @@ export default function Terminal() {
     }
     setConsoleMessage(e.target.value.toLowerCase().trim());
   };
-
-  const activateHelpCommand = () => {};
 
   return (
     <section className="Terminal">
@@ -212,8 +228,14 @@ export default function Terminal() {
               </a>
               ]
             </div>
-            {consoleMessage !== "/help" && validCommand}
-            {consoleLine}
+            {commandMessage && (
+              <div className="command-section">
+                <p className="yellow">
+                  <span className="terminal--arrow">&gt;</span> {commandMessage}
+                </p>
+              </div>
+            )}
+            {validCommand}
           </div>
           <div className="help-function">
             <form id="help-form" onSubmit={handleHelp}>
