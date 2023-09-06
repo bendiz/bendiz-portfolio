@@ -39,11 +39,19 @@ section#projects {
   flex-direction: column;
 }
 
+nav {
+  position: fixed;
+  top: 0;
+  z-index: 2;
+  background-color: #eeeeed;
+  width: 100%;
+  padding-inline: 2rem;
+}
+
 .Navigation {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-inline: 2em;
   font-size: 1.8em;
 }
 
@@ -66,7 +74,7 @@ section#projects {
   transition: all 0.5s ease;
 }
 
-.Navigation .nav--right {
+.nav--right {
   display: flex;
   align-items: center;
   gap: 1em;
@@ -425,15 +433,82 @@ input {
   transition: all 0.5s ease;
 }
 
+.nav--mobile {
+  font-size: 2.5rem;
+  rotate: calc(90deg);
+  user-select: none;
+  letter-spacing: -5px;
+  font-weight: bold;
+  opacity: 0.8;
+}
+
+.Navigation .hidden {
+  display: none;
+}
+
+.Navigation.open-menu {
+  margin: 0;
+  font-weight: bold;
+}
+.open-menu > .nav--right {
+  display: block;
+  flex-direction: column;
+  width: 100%;
+  background-color: #fff;
+  opacity: 0.8;
+  position: fixed;
+  top: 50px;
+  line-height: 2;
+  z-index: 1;
+}
+.open-menu .nav--right li {
+  display: block;
+}
+
+.open-menu .contact--button {
+  color: #000;
+  display: block;
+  background-color: var(--pink);
+  /* margin: 0 1em; */
+  padding: 0 1em;
+}
+
+.open-menu li a:hover {
+  border-bottom: 1px transparent;
+}
+
+.open-menu > .nav--mobile {
+  content: 'x';
+  text-align: center;
+}
+
 /* MEDIA QUERIES */
 
 /* Terminal related media queries */
+@media only screen and (min-width: 701px) {
+  .nav--left,
+  .nav--right {
+    display: flex;
+  }
+  .Navigation .nav--mobile {
+    display: none;
+  }
+}
 
-@media only screen and (max-width: 750px) {
+@media only screen and (max-width: 700px) {
+  nav {
+    padding-inline: 0;
+  }
   .projects > h2 {
     padding-bottom: 2rem;
   }
   .Navigation {
+    padding-block: 1rem;
+    margin-inline: 0;
+    align-items: left;
+  }
+  .nav--left,
+  .nav--right {
     display: none;
   }
   .intro--section {
@@ -559,10 +634,6 @@ input {
   .technologies-known > img {
     width: 45px;
     padding-inline: 0.5rem;
-  }
-
-  .terminal--window {
-    /* overflow-y: scroll; */
   }
 }
 

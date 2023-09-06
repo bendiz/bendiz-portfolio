@@ -1,7 +1,22 @@
+import React, { useState } from 'react';
+import classNames from 'classnames';
 import Button from './Button';
+
 export default function Navigation() {
+  const [openMenu, setOpenMenu] = useState(false);
+  const navigationClassnames = classNames(
+    `Navigation ${openMenu ? 'open-menu' : ''}`
+  );
+  const toggleMenu = () => {
+    setOpenMenu(!openMenu);
+    console.log(openMenu);
+  };
+
   return (
-    <nav className="Navigation">
+    <nav className={navigationClassnames}>
+      <li className="nav--mobile" onClick={toggleMenu}>
+        |||
+      </li>
       <div className="nav--left">
         <img
           src="./B-logo.svg"
@@ -9,7 +24,7 @@ export default function Navigation() {
           className="logo"
         />
       </div>
-      <div className="nav--right">
+      <div className="nav--right" onClick={toggleMenu}>
         <ul>
           <li>
             <a href="/benedicte-cv-english.pdf" target="blank">
