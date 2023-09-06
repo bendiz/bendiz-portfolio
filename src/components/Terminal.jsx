@@ -15,32 +15,29 @@ export default function Terminal() {
   const cursorClassName = "custom-cursor";
   const textClass = "text";
   const typewriterText = classNames(cursorClassName, textClass);
-
+  const randomNumber = (n) => Math.floor(Math.random() * n);
   // Console command messages
   const helpMessage = (
     <>
       List of available commands: <br />
       /funfact
       <br />
-      /family
-      <br />
       /hobbies
       <br />
-      /motivation"
+      /motivation
     </>
   );
-  const familyMessage = (
-    <>
-      "Me and my boyfriend of eleven years (and counting) <br />
-      live with our three year old daughter and our cat Fuse"
-    </>
-  );
-  const hobbiesMessage = (
-    <>
-      "Me and my boyfriend of eleven years (and counting) <br />
-      live with our three year old daughter and our cat Fuse"
-    </>
-  );
+
+  const hobbiesMessage = <>CrossFit, hiking and video games</>;
+
+  const listOfFunfacts = [
+    "I am terrified of bees",
+    "My father taught me how to build my own computer when I was in primary school",
+    "I love to do research and to really dive deep into learning a subject",
+    "I have a cat named Fuse",
+    "I love tacos",
+    "I love going to in-person tech conferences",
+  ];
   const invalidMessage = (
     <>Please input a valid command or /help for a list of commands</>
   );
@@ -55,11 +52,16 @@ export default function Terminal() {
       case "clear":
         setCommandMessage("");
         break;
-      case "/family" || "family":
-        setCommandMessage(familyMessage);
+      case "/funfact" || "funfact":
+        setCommandMessage(
+          <>{listOfFunfacts[randomNumber(listOfFunfacts.length)]}</>
+        );
         break;
       case "/hobbies" || "hobbies":
         setCommandMessage(hobbiesMessage);
+        break;
+      case "/motivation" || "motivation":
+        setCommandMessage(motivationMessage);
         break;
       default:
         setInvalidCommand(true);
@@ -98,28 +100,28 @@ export default function Terminal() {
       />
       <div className="technologies-known">
         <Tippy content="HTML">
-          <img src="./html-icon.svg" alt="" srcset="" id="html-icon" />
+          <img src="./html-icon.svg" alt="" srcSet="" id="html-icon" />
         </Tippy>
         <Tippy content="CSS">
-          <img src="./css-icon.svg" alt="" srcset="" />
+          <img src="./css-icon.svg" alt="" srcSet="" />
         </Tippy>
         <Tippy content="JavaScript">
-          <img src="./js-icon.svg" alt="" srcset="" />
+          <img src="./js-icon.svg" alt="" srcSet="" />
         </Tippy>
         <Tippy content="React">
-          <img src="./react-icon.svg" alt="" srcset="" />
+          <img src="./react-icon.svg" alt="" srcSet="" />
         </Tippy>
         <Tippy content="Bootstrap">
-          <img src="./bootstrap-icon.svg" alt="" srcset="" />
+          <img src="./bootstrap-icon.svg" alt="" srcSet="" />
         </Tippy>
         <Tippy content="Git">
-          <img src="./git-icon.svg" alt="" srcset="" />
+          <img src="./git-icon.svg" alt="" srcSet="" />
         </Tippy>
         <Tippy content="Github">
-          <img src="./github-icon.svg" alt="" srcset="" />
+          <img src="./github-icon.svg" alt="" srcSet="" />
         </Tippy>
         <Tippy content="Netlify">
-          <img src="./netlify-icon.svg" alt="" srcset="" />
+          <img src="./netlify-icon.svg" alt="" srcSet="" />
         </Tippy>
       </div>
       <div className="terminal">

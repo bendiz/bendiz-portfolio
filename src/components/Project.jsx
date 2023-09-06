@@ -9,10 +9,10 @@ export default function Project({ title, src, alt, github, children, live }) {
       <div className="project--heading">
         <h3 className="project--text project--title">{title}</h3>
         <div className="technologies-used">
-          <img src="./html-icon.svg" alt="" srcset="" className="tech-icon" />
-          <img src="./css-icon.svg" alt="" srcset="" className="tech-icon" />
-          <img src="./js-icon.svg" alt="" srcset="" className="tech-icon" />
-          <img src="./react-icon.svg" alt="" srcset="" className="tech-icon" />
+          <img src="./html-icon.svg" alt="" srcSet="" className="tech-icon" />
+          <img src="./css-icon.svg" alt="" srcSet="" className="tech-icon" />
+          <img src="./js-icon.svg" alt="" srcSet="" className="tech-icon" />
+          <img src="./react-icon.svg" alt="" srcSet="" className="tech-icon" />
         </div>
       </div>
       <div className="project--description project--text">
