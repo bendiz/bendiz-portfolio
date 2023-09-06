@@ -197,7 +197,7 @@ export default function Terminal() {
               </h3>
               [
               <a
-                href="src/components/documents/benedicte-cv-english.pdf"
+                href="./benedicte-cv-english.pdf"
                 target="blank"
                 rel="noopener noreferrer"
               >
