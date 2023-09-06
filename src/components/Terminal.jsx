@@ -20,15 +20,17 @@ export default function Terminal() {
   const helpMessage = (
     <>
       List of available commands: <br />
-      /funfact
+      /funfact - a random funfact about me
       <br />
-      /hobbies
+      /hobbies - a list of my hobbies
       <br />
-      /motivation
+      /clear - clears the terminal
     </>
   );
 
-  const hobbiesMessage = <>CrossFit, hiking and video games</>;
+  const hobbiesMessage = (
+    <>When I'm not programming, I enjoy CrossFit, hiking and video games.</>
+  );
 
   const listOfFunfacts = [
     "I am terrified of bees",
@@ -46,22 +48,23 @@ export default function Terminal() {
     e.preventDefault();
     setInvalidCommand(false);
     switch (consoleMessage) {
-      case "/help" || "help":
+      case "/help":
+      case "help":
         setCommandMessage(helpMessage);
         break;
+      case "/clear":
       case "clear":
         setCommandMessage("");
         break;
-      case "/funfact" || "funfact":
+      case "/funfact":
+      case "funfact":
         setCommandMessage(
           <>{listOfFunfacts[randomNumber(listOfFunfacts.length)]}</>
         );
         break;
-      case "/hobbies" || "hobbies":
+      case "/hobbies":
+      case "hobbies":
         setCommandMessage(hobbiesMessage);
-        break;
-      case "/motivation" || "motivation":
-        setCommandMessage(motivationMessage);
         break;
       default:
         setInvalidCommand(true);
@@ -237,7 +240,7 @@ export default function Terminal() {
                     name="help"
                     id="help"
                     autoComplete="off"
-                    maxLength="10"
+                    maxLength="11"
                     minLength="4"
                     onChange={updateConsole}
                     onFocus={() => setVisibility("hidden")}
