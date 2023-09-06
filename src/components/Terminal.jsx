@@ -1,19 +1,19 @@
-import { React, useState, useEffect } from "react";
-import { TypeAnimation } from "react-type-animation";
-import "animate.css";
-import classNames from "classnames";
-import Tippy from "@tippyjs/react";
-import "tippy.js/dist/tippy.css";
+import { React, useState, useEffect } from 'react';
+import { TypeAnimation } from 'react-type-animation';
+import 'animate.css';
+import classNames from 'classnames';
+import Tippy from '@tippyjs/react';
+import 'tippy.js/dist/tippy.css';
 
 export default function Terminal() {
-  const [consoleMessage, setConsoleMessage] = useState("");
-  const [invalidCommand, setInvalidCommand] = useState("");
-  const [commandMessage, setCommandMessage] = useState("");
-  const [cursorMarker, setCursorMarker] = useState("cursor-marker");
-  const [visibility, setVisibility] = useState("show");
+  const [consoleMessage, setConsoleMessage] = useState('');
+  const [invalidCommand, setInvalidCommand] = useState('');
+  const [commandMessage, setCommandMessage] = useState('');
+  const [cursorMarker, setCursorMarker] = useState('cursor-marker');
+  const [visibility, setVisibility] = useState('show');
 
-  const cursorClassName = "custom-cursor";
-  const textClass = "text";
+  const cursorClassName = 'custom-cursor';
+  const textClass = 'text';
   const typewriterText = classNames(cursorClassName, textClass);
   const randomNumber = (n) => Math.floor(Math.random() * n);
   // Console command messages
@@ -33,12 +33,12 @@ export default function Terminal() {
   );
 
   const listOfFunfacts = [
-    "I am terrified of bees",
-    "My father taught me how to build my own computer when I was in primary school",
-    "I love to do research and to really dive deep into learning a subject",
-    "I have a cat named Fuse",
-    "I love tacos",
-    "I love going to in-person tech conferences",
+    'I am terrified of bees',
+    'My father taught me how to build my own computer when I was in primary school',
+    'I love to do research and to really dive deep into learning a subject',
+    'I have a cat named Fuse',
+    'I love tacos',
+    'I love going to in-person tech conferences',
   ];
   const invalidMessage = (
     <>Please input a valid command or /help for a list of commands</>
@@ -48,22 +48,22 @@ export default function Terminal() {
     e.preventDefault();
     setInvalidCommand(false);
     switch (consoleMessage) {
-      case "/help":
-      case "help":
+      case '/help':
+      case 'help':
         setCommandMessage(helpMessage);
         break;
-      case "/clear":
-      case "clear":
-        setCommandMessage("");
+      case '/clear':
+      case 'clear':
+        setCommandMessage('');
         break;
-      case "/funfact":
-      case "funfact":
+      case '/funfact':
+      case 'funfact':
         setCommandMessage(
           <>{listOfFunfacts[randomNumber(listOfFunfacts.length)]}</>
         );
         break;
-      case "/hobbies":
-      case "hobbies":
+      case '/hobbies':
+      case 'hobbies':
         setCommandMessage(hobbiesMessage);
         break;
       default:
@@ -74,7 +74,7 @@ export default function Terminal() {
   };
 
   const updateConsole = (e) => {
-    consoleMessage && setVisibility("hidden");
+    consoleMessage && setVisibility('hidden');
     setConsoleMessage(e.target.value.toLowerCase().trim());
   };
 
@@ -89,7 +89,7 @@ export default function Terminal() {
         sequence={[
           `Front-end developer`,
           1000,
-          "Front-end developer based in Kristiansund, Norway.",
+          'Front-end developer based in Kristiansund, Norway.',
           2000,
           (el) => el.classList.remove(cursorClassName),
           200,
@@ -150,7 +150,7 @@ export default function Terminal() {
           <div className="terminal--section">
             <div className="command-section">
               <h3 className="terminal--heading">
-                <span className="terminal--arrow">&gt;</span>{" "}
+                <span className="terminal--arrow">&gt;</span>{' '}
                 Benedicte.education
               </h3>
               <span className="yellow">
@@ -159,7 +159,7 @@ export default function Terminal() {
             </div>
             <div className="command-section">
               <h3 className="terminal--heading">
-                <span className="terminal--arrow">&gt;</span>{" "}
+                <span className="terminal--arrow">&gt;</span>{' '}
                 Benedicte.contactMe
               </h3>
               [<span className="yellow"></span>
@@ -182,7 +182,7 @@ export default function Terminal() {
             </div>
             <div className="command-section">
               <h3 className="terminal--heading">
-                <span className="terminal--arrow">&gt;</span>{" "}
+                <span className="terminal--arrow">&gt;</span>{' '}
                 Benedicte.techSkills
               </h3>
               [
@@ -210,22 +210,34 @@ export default function Terminal() {
                 <span className="terminal-arrow">&gt;</span> Benedicte.projects
               </h3>
               [
-              <a href="" target="blank" rel="noopener noreferrer">
+              <a
+                href="https://tenzi-bendiz.netlify.app/"
+                target="blank"
+                rel="noopener noreferrer"
+              >
                 "Tenzi Game"
               </a>
-              ,{" "}
-              <a href="" target="blank" rel="noopener noreferrer">
+              ,{' '}
+              <a
+                href="https://bendiz.no"
+                target="blank"
+                rel="noopener noreferrer"
+              >
                 "Weather App"
               </a>
-              ,{" "}
-              <a href="" target="blank" rel="noopener noreferrer">
+              ,{' '}
+              <a
+                href="https://notes-app-bendiz.netlify.app/"
+                target="blank"
+                rel="noopener noreferrer"
+              >
                 "Notes App"
               </a>
               ]
             </div>
             {commandMessage && (
               <div className="command-section">
-                <p className={invalidCommand ? "invalid" : "yellow"}>
+                <p className={invalidCommand ? 'invalid' : 'yellow'}>
                   <span className="terminal--arrow">&gt;</span> {commandMessage}
                 </p>
               </div>
@@ -243,21 +255,21 @@ export default function Terminal() {
                     maxLength="11"
                     minLength="4"
                     onChange={updateConsole}
-                    onFocus={() => setVisibility("hidden")}
+                    onFocus={() => setVisibility('hidden')}
                     onBlur={() =>
-                      setVisibility("").then(
-                        setConsoleMessage("").then(
-                          setCursorMarker("cursor-marker")
+                      setVisibility('').then(
+                        setConsoleMessage('').then(
+                          setCursorMarker('cursor-marker')
                         )
                       )
                     }
                   />
-                  <span className={classNames("placeholder", "yellow")}>
-                    {visibility === "hidden"
-                      ? "$"
-                      : "> " + "Type /help for more commands.."}
+                  <span className={classNames('placeholder', 'yellow')}>
+                    {visibility === 'hidden'
+                      ? '$'
+                      : '> ' + 'Type /help for more commands..'}
                     <span
-                      className={classNames(visibility, "yellow", cursorMarker)}
+                      className={classNames(visibility, 'yellow', cursorMarker)}
                     >
                       |
                     </span>

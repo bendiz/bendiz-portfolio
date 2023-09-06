@@ -1,4 +1,4 @@
-import Button from "./Button";
+import Button from './Button';
 export default function Navigation() {
   return (
     <nav className="Navigation">
@@ -12,10 +12,9 @@ export default function Navigation() {
       <div className="nav--right">
         <ul>
           <li>
-            <a href="">About</a>
-          </li>
-          <li>
-            <a href="">Resume</a>
+            <a href="/benedicte-cv-english.pdf" target="blank">
+              Resume
+            </a>
           </li>
           <li>
             <a href="#projects">Projects</a>

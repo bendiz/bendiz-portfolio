@@ -1,5 +1,5 @@
-import Project from "./Project";
-import React from "react";
+import Project from './Project';
+import React from 'react';
 
 export default function Projects() {
   return (
@@ -10,13 +10,13 @@ export default function Projects() {
       <div className="projects--cards">
         <Project
           title="Tenzi Game"
-          src="./public/tenzi.png"
+          src="/tenzi.png"
           alt="A picture of a tenzi game project"
           live="https://tenzi-bendiz.netlify.app/"
           github="https://github.com/bendiz/tenzi-game"
         >
           Tenzi game made after a challenge on Scrimba.com. Implemented several
-          functionalities to make it more enjoyable by my 3-year old daughter.{" "}
+          functionalities to make it more enjoyable by my 3-year old daughter.{' '}
           <br />
           <br />
           Added scoreboard with best time, best amount of rolls and toggling
@@ -25,7 +25,7 @@ export default function Projects() {
         </Project>
         <Project
           title="Weather App"
-          src="./public/Weather.png"
+          src="/Weather.png"
           alt="A picture of a weather app project"
           live="https://bendiz.no/"
           github="https://github.com/bendiz/weather-react"
@@ -40,10 +40,10 @@ export default function Projects() {
         </Project>
         <Project
           title="Notes App"
-          src="./public/Notes.png"
+          src="/Notes.png"
           alt="A picture of a note app project"
           live="https://notes-app-bendiz.netlify.app/"
-          github="https://github.com/bendiz/weather-react"
+          github="https://github.com/bendiz/notes-app"
         >
           Made after a challenge on Scrimba.com. The user's notes are saved in
           the browser and can be accessed if the user closes their browser or
